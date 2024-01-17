@@ -1,0 +1,24 @@
+.errorPage{
+    font-family: Montserrat;
+    color:  #ea5c5d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.errorTitle{
+    font-size: 220px;
+    margin: 10px;
+    &__sub{
+        font-size: 30px;
+    }
+    &__link{
+        padding-bottom: 100px;
+        color:#ea5c5d;
+        text-decoration: none;
+    }
+    // &__link:active{
+    //     color: #070101;
+    // }
+}

@@ -1,0 +1,33 @@
+$main-color : #ea5c5d;
+
+.nav{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__logo{
+        height: 60px;
+    }
+    &__links{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
+        font-family: Montserrat;
+    }
+    & a {
+        color: $main-color;
+        text-decoration: none;
+
+    }
+}
+
+.btn__home:hover{
+    text-decoration: underline;
+    color: $main-color;
+}  
+
+.btn__about:hover{
+    text-decoration: underline;
+    color: $main-color;
+}  
