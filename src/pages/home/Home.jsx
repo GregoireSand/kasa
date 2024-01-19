@@ -1,14 +1,18 @@
-import { Link } from "react-router-dom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Banner from "../../components/Banner";
+import CardContainer from "../../components/CardContainer";
 
 function HomePage(){
     return(
     <>
         <Header />
-        <h1> My Home Page </h1>
-        <p>Go to <Link to="/products">the list of products </Link>
-        </p>
+        <Banner 
+        imageUrl='src/assets/home_image.png' 
+        altText='Paysage montagnard'
+        paragraph="Chez vous, partout et ailleurs"
+        />
+        <CardContainer />
         <Footer />
     </>
     )

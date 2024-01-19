@@ -3,22 +3,52 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import Banner from '../../components/Banner';
 
-
-const icon = <FontAwesomeIcon icon={faChevronUp} style={{color: "#ffffff",paddingRight: '20px', paddingTop: '4px'}} />
+const customIcon = <FontAwesomeIcon icon={faChevronUp} className={styles.icon} />
 
 function About(){
     return (
         <>
         <Header />
-        <div className={styles.aboutBanner}>
-            <img className={styles.aboutBanner__image} src='src/assets/about_landscape.png' alt='Paysage montrant des pins en premier plan et des montagnes traversées par une rivière en arrière-plan' />
-        </div>
+        <Banner imageUrl='src/assets/about_landscape.png' altText='Paysage montagnard' />
         <ul>
-            <li>Fiabilité {icon}</li>
-            <li>Respect {icon}</li>
-            <li>Service {icon}</li>
-            <li>Sécurité {icon}</li>
+            <li>
+                <div>
+                    Fiabilité {customIcon}
+                </div>
+                <div className={styles.li__description}>
+                    <p>Les annonces postées sur Kasa garantissent une fiabilité totale. 
+                    Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    Respect {customIcon}
+                </div>
+                <div className={styles.li__description}>
+                    <p>La bienveillance fait partie des valeurs fondatries de Kasa. 
+                    Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.</p> 
+                </div>
+            </li>
+            <li>
+                <div>
+                    Service {customIcon}
+                </div>
+                <div className={styles.li__description}>
+                    La bienveillance fait partie des valeurs fondatries de Kasa. 
+                    Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.
+                </div>
+            </li>
+            <li>
+                Sécurité {customIcon}
+                <div className={styles.li__description}>
+                    La sécurié est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, 
+                    chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire,
+                    cela permet à nos équipes de vérifier que les standards sont bien respéctés. Nous organisons également des ateliers sur la sécurité 
+                    domestiques pour nos hôtes.
+                </div>
+            </li>    
         </ul>
         <Footer />
         </>

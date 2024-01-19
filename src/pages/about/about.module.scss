@@ -1,33 +1,11 @@
 $main-color : #ea5c5d;
 
-body{
-    margin:0;
-    padding: 0;
-}
-
-.aboutBanner{
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    height: 220px;
-    width: 88%;
-
-    &__image {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 25px;
-        filter: brightness(60%)
-    }
-}
-
 ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
     padding: 0px;
-    font-family: Montserrat;
     padding-bottom: 20px;
 }
 
@@ -45,6 +23,18 @@ li {
     justify-content: space-between;
 }
 
+.li__description{
+    color: #ea5c5d;
+    width: 77%;
+    background-color: #f6f6f6;
+    margin-top: -30px;
+    height: auto;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
 .icon {
-    padding-right: 20px;
+    color: "#ffffff";
+    padding-right: '20px';
+    padding-top: '4px'
 }
