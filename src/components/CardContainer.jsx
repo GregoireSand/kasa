@@ -1,15 +1,10 @@
 import styles from './cardContainer.module.scss';
-import Card from './Card'
+import CardList from './CardList'
 
 function CardContainer(){
     return(
         <div className={styles.cardContainer}>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <CardList />
         </div>
     )
 }

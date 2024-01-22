@@ -16,7 +16,5 @@ function Error(){
         </>
     )
 }
-<a className={styles.btn__home}> <Link to='/'>Accueil</Link></a>
-
 
 export default Error
