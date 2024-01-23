@@ -6,11 +6,17 @@ function Header(){
         <>  
             <nav className={styles.nav} >
                 <Link to='/'>
-                <img src="src/assets/logo.png" alt="Logo" className={styles.nav__logo} />
+                    <img src="src/assets/logo.png" alt="Logo" className={styles.nav__logo} />
                 </Link>
-                <div className={styles.nav__links}>
-                    <a className={styles.btn__home}> <Link to='/'>Accueil</Link></a>
-                    <a className={styles.btn__about}> <Link to='/about'>A propos</Link></a>
+                <div>
+                    <ul className={styles.nav__links}>
+                        <li className={styles.btn__home}> 
+                            <Link to='/'>Accueil</Link>
+                        </li>
+                        <li className={styles.btn__about}> 
+                            <Link to='/about'>A propos</Link>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </>
