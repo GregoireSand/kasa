@@ -1,11 +1,14 @@
 $main-color: #ea5c5d;
 
 .accordion__container {
-  width: 77%;
   display: flex;
   flex-direction: column;
-  margin: auto;
+  align-items: center;
   margin-bottom: 40px;
+}
+
+.accordion__container2{
+  width: 77%;
 }
 
 .button {
@@ -14,9 +17,6 @@ $main-color: #ea5c5d;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 100%;
   background-color: $main-color;
   color: white;
   border-radius: 10px;
@@ -43,7 +43,7 @@ $main-color: #ea5c5d;
   font-family: Montserrat;
   font-size: 18px;
   line-height: 1.7;
-  width: 1060px;
+  width: 77%;
   &__text{
     margin: 20px;
   }
@@ -55,23 +55,10 @@ $main-color: #ea5c5d;
     font-family: Montserrat;
     font-size: 18px;
     line-height: 1.7;
-    width: 1060px;
+    width: 77%;
   }
 }
-  
-  .button{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 100%;
-    background-color: $main-color;
-    color: white;
-    border-radius: 10px;
-    font-size: 29px;
-    font-family: Montserrat;
-  }
 
+.description__list {
+  list-style: none
+}

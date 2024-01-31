@@ -1,10 +1,21 @@
-function Rating({isGrey, rating}){
+// Rating.jsx
 
-    return(
-    <span>
-        <i className={`fa-solid fa-star ${isGrey}`} title={`étoile de notation`}></i>
-    </span>
-    )
-}
+import React from 'react';
+import styles from './rating.module.scss';
 
-export default Rating
+const Rating = ({ note }) => {
+  const roundedNote = Math.round(note);
+
+  return (
+    <div className={styles.rating}>
+      {[...Array(roundedNote)].map((_, index) => (
+        <span key={index} className={styles.starFilled}>&#9733;</span>
+      ))}
+      {[...Array(5 - roundedNote)].map((_, index) => (
+        <span key={index} className={styles.star}>&#9733;</span>
+      ))}
+    </div>
+  );
+};
+
+export default Rating;

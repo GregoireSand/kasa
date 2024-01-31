@@ -46,34 +46,32 @@ function Accomodation() {
                 <div className={styles.accomodation__tagsContainer}>
                    {formattedTags}
                 </div>
-                <div className="accommodation_rating" title={`note du logement ${selectedAccomodation.rating}/5`}>
-                                {[...Array(5).keys()].map((n) => (
-                                    <Rating
-                                        key={n}
-                                        isGrey={
-                                            n + 1 > selectedAccomodation.rating
-                                                ? 'rating_star_grey'
-                                                : ''
-                                        }
-                                    />
-                                ))}
+                <div>
                 </div>
+            
             </div>
-                <div className={styles.accordionContainer}> 
-                   <div className={styles.accordion}> 
-                        <Accordion
-                            titre='Description'
-                            description={selectedAccomodation.description}
-                        />
-                    </div>
-                    <div className={styles.accordion}> 
-                        <Accordion 
-                            titre='Equipements'
-                            description={selectedAccomodation.equipments}
-                        />
+                <div className={styles.aboutAccordion}>
+                    <div className={styles.accordionContainer}> 
+                        <div className={styles.accordion}> 
+                            <Accordion
+                                titre='Description'
+                                description={selectedAccomodation.description}
+                                customClass={styles.accordionCustom}
+                                customClass2={styles.accordionCustom2}
+                                customClass3={styles.accordionCustom3}
+                            />
+                        </div>
+                        <div className={styles.accordion}> 
+                            <Accordion 
+                                titre='Equipements'
+                                description={selectedAccomodation.equipments}
+                                customClass={styles.accordionCustom}
+                                customClass2={styles.accordionCustom2}
+                                customClass3={styles.accordionCustom3}
+                            />
+                        </div>
                     </div>
                 </div>
-
             <Footer />
         </>
     );

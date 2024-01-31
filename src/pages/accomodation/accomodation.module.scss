@@ -82,10 +82,35 @@ $main-color : #ea5c5d;
 
 .accordionContainer{
     display: flex;
-    flex-direction: row;    
+    flex-direction: row; 
+    justify-content: space-between;   
+
 }
 
 .accordion{
-    width: 50%;
+    width: 48.5%;
 }
 
+.accordion__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
+  .accordion__container2{
+    width: 100%;
+  }
+
+  .aboutAccordion .accordionCustom{
+    width: 100%;
+  }
+
+  .aboutAccordion .accordionCustom2{
+    width: 100%;
+  }
+
+  .aboutAccordion .accordionCustom3{
+    width: 100%;
+  }
