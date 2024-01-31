@@ -10,7 +10,7 @@ function Collapse ({ title, description }) {
   const [desc, setDesc] = useState(styles.dropdown__desc);
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const changeColor = () => {
+  const openDesc = () => {
     if (isExpanded) {
       setIcon(styles.icon);
       setDesc(styles.dropdown__desc);
@@ -26,7 +26,7 @@ function Collapse ({ title, description }) {
       <div className={styles.dropdown}>
         <div className={styles.dropdown__title}>
           <div>{title}</div>
-          <div className={icon} onClick={changeColor}>
+          <div className={icon} onClick={openDesc}>
             {customIcon}
           </div>
         </div>

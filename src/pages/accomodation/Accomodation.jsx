@@ -3,38 +3,80 @@ import accomodations from '../../datas/datas.json';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { useParams } from 'react-router-dom';
+import Accordion from '../../components/Accordion';
 
-function Accomodation(){
 
-    const datas =  accomodations.map((accomodation) => (
-        <>
-           {/* // <img className={styles.image} src={accomodation.pictures}/> */}
-            <div >
-                <div>
-                    <h1>{accomodation.title}</h1>
-                </div>
-                <div>
+function Accomodation() {
+    const { id } = useParams();  
 
-                </div>
-            </div>
-            <div>
-                <div>
-                    
-                </div>
-                <div>
-
-                </div>
-            </div>
-        </>
-    ));
+    // Filtre les données pour obtenir uniquement l'appartement avec l'ID spécifié
+    const selectedAccomodation = accomodations.find(acc => acc.id === id);
+    
+    const formattedTags = selectedAccomodation.tags.map(tag => (
+        <div key={tag} className={styles.accomodation__tags}>
+          {tag}
+        </div>
+      ));
 
     return (
         <>
             <Header />
-            {datas}
+            <div className={styles.pictures}>
+                <img className={styles.coverPicture} src={selectedAccomodation.cover} />
+            </div>
+            <div className={styles.accomodation__details1}>
+                <div>
+                    <p className={styles.accomodation__title}> 
+                        {selectedAccomodation.title} 
+                    </p>
+                    <p className={styles.accomodation__location}> 
+                        {selectedAccomodation.location} 
+                    </p>
+                </div>
+                <div className={styles.accomodation__hostDetails}>
+                    <p className={styles.accomodation__hostName}> 
+                        {selectedAccomodation.host.name} 
+                    </p>
+                    <div className={styles.accomodation__hostPictureContainer}> 
+                        <img src={selectedAccomodation.host.picture} alt="Photo de profil de l'hôte" className={styles.accomodation__hostPicture}/> 
+                    </div>
+                </div>
+            </div>
+            <div className={styles.accomodation__details2}>
+                <div className={styles.accomodation__tagsContainer}>
+                   {formattedTags}
+                </div>
+                <div className="accommodation_rating" title={`note du logement ${selectedAccomodation.rating}/5`}>
+                                {[...Array(5).keys()].map((n) => (
+                                    <Rating
+                                        key={n}
+                                        isGrey={
+                                            n + 1 > selectedAccomodation.rating
+                                                ? 'rating_star_grey'
+                                                : ''
+                                        }
+                                    />
+                                ))}
+                </div>
+            </div>
+                <div className={styles.accordionContainer}> 
+                   <div className={styles.accordion}> 
+                        <Accordion
+                            titre='Description'
+                            description={selectedAccomodation.description}
+                        />
+                    </div>
+                    <div className={styles.accordion}> 
+                        <Accordion 
+                            titre='Equipements'
+                            description={selectedAccomodation.equipments}
+                        />
+                    </div>
+                </div>
+
             <Footer />
         </>
-    )
+    );
 }
 
-export default Accomodation
+export default Accomodation;

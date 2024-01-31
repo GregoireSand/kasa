@@ -1,0 +1,77 @@
+$main-color: #ea5c5d;
+
+.accordion__container {
+  width: 77%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  background-color: $main-color;
+  color: white;
+  border-radius: 10px;
+  font-size: 29px;
+  font-family: Montserrat;
+  cursor: pointer; /* Ajout du curseur pointer pour indiquer que c'est cliquable */
+}
+
+.icon {
+  transition: transform 0.3s ease;
+}
+
+.rotatedIcon {
+  transform: rotate(-180deg);
+}
+
+.description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  color: $main-color;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  font-family: Montserrat;
+  font-size: 18px;
+  line-height: 1.7;
+  width: 1060px;
+  &__text{
+    margin: 20px;
+  }
+  &__expanded {
+    max-height: 1000px; /* Hauteur maximale pour une expansion complète */
+    color: $main-color;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    font-family: Montserrat;
+    font-size: 18px;
+    line-height: 1.7;
+    width: 1060px;
+  }
+}
+  
+  .button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    background-color: $main-color;
+    color: white;
+    border-radius: 10px;
+    font-size: 29px;
+    font-family: Montserrat;
+  }
+

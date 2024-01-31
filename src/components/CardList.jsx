@@ -9,8 +9,9 @@ function CardList() {
 
       <div className={styles.card} key={accomodation.id}>
         <Link to={`/accomodation/${accomodation.id}`}>
-          <img className={styles.card__image} src={accomodation.cover} alt={accomodation.title} />
-          <p className={styles.card__text}>{accomodation.title}</p>
+            <img className={styles.card__image} src={accomodation.cover} alt={accomodation.title} />
+            <div className={styles.card__overlay}></div>
+            <p className={styles.card__text}>{accomodation.title}</p>
         </Link>
       </div>
   ));
