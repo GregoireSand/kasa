@@ -1,0 +1,34 @@
+/* slider.module.scss */
+.slider {
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    max-height: 415px;
+    border-radius: 25px;
+    display: block;
+  }
+  
+.sliderBtn {
+    all: unset;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 2rem;
+    cursor: pointer;
+    font-size: 80px;
+}
+
+.imageIndex {
+    position: absolute;
+    left: 662px;
+    bottom: 30px;
+    font-family: Montserrat;
+    font-weight: 700;
+    color: white;
+}
