@@ -11,6 +11,10 @@
     max-height: 415px;
     border-radius: 25px;
     display: block;
+    @media (max-width: 425px)  {
+      height: 255px;
+      border-radius: 10px;
+  }
   }
   
 .sliderBtn {
@@ -22,6 +26,9 @@
     padding: 2rem;
     cursor: pointer;
     font-size: 80px;
+    @media (max-width: 425px)  {
+      font-size: 30px;
+  }
 }
 
 .imageIndex {
@@ -31,4 +38,7 @@
     font-family: Montserrat;
     font-weight: 700;
     color: white;
+    @media (max-width: 425px)  {
+      display: none;
+    }
 }

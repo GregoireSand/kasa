@@ -1,9 +1,15 @@
 
 .ratingContainer {
   display: flex;
-  gap: 7px;
+  gap: 10px;
+  @media (max-width: 425px)  {
+    gap:5px;
+  }
 }
 
 .icon{
   font-size: 28px;
+  @media (max-width: 425px)  {
+    font-size: 19px;
+  }
 }

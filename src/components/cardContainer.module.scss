@@ -14,5 +14,8 @@
     align-items: center;
     gap: 40px;
     @media (max-width: 425px)  {
+        background-color: white;
+        padding-top: 10px;
+        gap: 25px;
     }
 }

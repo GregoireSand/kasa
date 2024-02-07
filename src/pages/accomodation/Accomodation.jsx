@@ -32,36 +32,43 @@ function Accomodation() {
       <div className={styles.slider}>
         <Slider images={selectedAccomodation.pictures} />
       </div>
-      <div className={styles.accomodation__details1}>
-        <div>
-          <p className={styles.accomodation__title}>
-            {selectedAccomodation.title}
-          </p>
-          <p className={styles.accomodation__location}>
-            {selectedAccomodation.location}
-          </p>
-        </div>
-        <div className={styles.accomodation__hostDetails}>
-          <p className={styles.accomodation__hostName}>
-            {selectedAccomodation.host.name}
-          </p>
-          <div className={styles.accomodation__hostPictureContainer}>
-            <img
-              src={selectedAccomodation.host.picture}
-              alt="Photo de profil de l'hôte"
-              className={styles.accomodation__hostPicture}
-            />
+
+      <div className={styles.detailsContainer}>
+
+        <div className={styles.detailsLeft}>
+          <div>
+            <p className={styles.accomodation__title}>
+              {selectedAccomodation.title}
+            </p>
+            <p className={styles.accomodation__location}>
+              {selectedAccomodation.location}
+            </p>
+            <div className={styles.accomodation__tagsContainer}>
+              {formattedTags}
+            </div>
           </div>
         </div>
-      </div>
-      <div className={styles.accomodation__details2}>
-        <div className={styles.accomodation__tagsContainer}>
-          {formattedTags}
-        </div>
-        <div>
+
+        <div className={styles.detailsRight}>
+          <div className={styles.accomodation__hostDetails}>
+            <p className={styles.accomodation__hostName}>
+              {selectedAccomodation.host.name}
+            </p>
+            <div className={styles.accomodation__hostPictureContainer}>
+              <img
+                src={selectedAccomodation.host.picture}
+                alt="Photo de profil de l'hôte"
+                className={styles.accomodation__hostPicture}
+              />
+            </div>
+          </div>
+          <div>
             <Rating rating={selectedAccomodation.rating} />
-        </div>      
+          </div> 
+        </div>
+        
       </div>
+
       <div className={styles.aboutAccordion}>
         <div className={styles.accordionContainer}>
           <div className={styles.accordion}>
