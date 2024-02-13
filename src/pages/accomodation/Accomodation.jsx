@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './accomodation.module.scss';
 import accomodations from '../../datas/datas.json';
+
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Accordion from '../../components/Accordion';
